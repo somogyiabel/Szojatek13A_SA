@@ -27,6 +27,10 @@ export default class Content {
         // Kezd a kódolást innen -->
         //Adatok beolvasása
         const megold: Megoldas = new Megoldas("szoveg.txt");
+        //Linkek hozzáadása
+        res.write("Linkek: ")
+        res.write('<a href="https://github.com/somogyiabel/Szojatek13A_SA">GITHUB</a> ')
+        res.write(' <a href="https://szojatek13a-sa.herokuapp.com/">HEROKU</a>\n')
         //1
         const bekertSzo: string = params.bekertSzo as string;
         res.write(`1. feladat Adjon meg egy szót: <input type='text' value='' name='bekertSzo' value=${bekertSzo} style='max-width:100px;' onChange='this.form.submit();'>\n`);
